@@ -34,12 +34,12 @@ app.get("/future-meals", async (req, res) => {
 
 app.get("/past-meals", async (req, res) => {
   const pastMeals = await knex("homework3.Meal").where('when', '<', knex.raw('NOW()'));
-  res.json(pastMeals);
+  res.json(pastMeals || []);
 });
 
 app.get("/all-meals", async (req, res) => {
   const allMeals = await knex("homework3.Meal").select("*");
-  res.json(allMeals);
+  res.json(allMeals || []);
 });
 
 app.get("/first-meal", async (req, res) => {
