@@ -4,6 +4,7 @@ const router = express.Router();
 const path = require("path");
 
 const mealsRouter = require("./api/meals");
+const reservationRouter = require("./api/reservations");
 const buildPath = path.join(__dirname, "../../public"); //I changed /dist for /public, because if was give me a directory error
 const port = process.env.PORT || 3000;
 const cors = require("cors");
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(cors());
 
 router.use("/meals", mealsRouter);
+router.use("/reservation", reservationRouter);
 
 // Homework NJS Week 1
 
