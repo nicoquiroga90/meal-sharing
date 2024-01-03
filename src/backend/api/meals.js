@@ -4,7 +4,7 @@ const knex = require("../database");
 
 router.get("/", async (req, res) => {
   try {
-    const meals = knex("homework3.Meal");
+    let meals = knex("homework3.Meal");
 
     const {
       maxPrice,
@@ -17,41 +17,25 @@ router.get("/", async (req, res) => {
       sortDir
     } = req.query;
 
-    if (maxPrice !== undefined) {
-      meals = meals.where("price", "<", maxPrice);
-    }
+    meals = maxPrice || maxPrice === "0" ? meals.where("price", "<", maxPrice) : meals;
 
-    if (availableReservations !== undefined) {
-      if (availableReservations === "true") {
-        meals = meals.whereRaw("max_reservations > reservations");
-      } else if (availableReservations === "false") {
-        meals = meals.whereRaw("max_reservations <= reservations");
-      }
-    }
+    meals = availableReservations || availableReservations === "0"
+      ? availableReservations === "true"
+        ? meals.whereRaw("max_reservations > reservations")
+        : availableReservations === "false"
+          ? meals.whereRaw("max_reservations <= reservations")
+          : (() => {
+              res.send("Error checking available reservations");
+              return meals;
+            })()
+      : meals;
 
-    if (title !== undefined) {
-      meals = meals.where("title", "like", `%${title}%`);
-    }
-
-    if (dateAfter !== undefined) {
-      meals = meals.where("when", ">", dateAfter);
-    }
-
-    if (dateBefore !== undefined) {
-      meals = meals.where("when", "<", dateBefore);
-    }
-
-    if (limit !== undefined) {
-      meals = meals.limit(parseInt(limit));
-    }
-
-    if (sortKey !== undefined) {
-      const order = "asc";
-      if (sortDir !== undefined && sortDir === "desc") {
-        order = "desc";
-      }
-      meals = meals.orderBy(sortKey, order);
-    }
+    meals = title || title === "0" ? meals.where("title", "like", `%${title}%`) : meals;
+    meals = dateAfter || dateAfter === "0" ? meals.where("when", ">", dateAfter) : meals;
+    meals = dateBefore || dateBefore === "0" ? meals.where("when", "<", dateBefore) : meals;
+    meals = limit || limit === "0" ? meals.limit(parseInt(limit)) : meals;
+    
+    meals = sortKey || sortKey === "0" ? meals.orderBy(sortKey, sortDir === "desc" ? "desc" : "asc") : meals;
 
     const result = await meals.select("*");
     res.json(result);
@@ -59,6 +43,8 @@ router.get("/", async (req, res) => {
     res.status(500).send("Error retrieving meals");
   }
 });
+
+
 
 router.get("/:meal_id/reviews", async (req, res) => {
   const { meal_id } = req.params;
