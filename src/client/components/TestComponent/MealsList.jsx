@@ -1,30 +1,27 @@
 import { useState, useEffect } from 'react';
+import Meal from './Meals';
+import '../../styles/MealsList.css'; 
 
 const MealsList = () => {
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
-    fetch('/api/meals') 
+    fetch('/api/meals')
       .then(response => response.json())
       .then(data => setMeals(data))
       .catch(error => console.error('Error:', error));
-  }, []); 
+  }, []);
 
   return (
     <div>
       <h2>Meals List</h2>
-      <ul>
+      <div className="meals-grid">
         {meals.map(meal => (
-          <li key={meal.id}>
-            <h3>{meal.title}</h3>
-            <p>{meal.description}</p>
-            <p>Price: {meal.price}</p>
-          </li>
+          <Meal key={meal.id} meal={meal} />
         ))}
-      </ul> 
+      </div>
     </div>
   );
 };
-
 
 export default MealsList;
