@@ -24,10 +24,12 @@ function ReservationForm({ mealId }) {
       });
       if (response.ok) {
         const data = await response.json();
-        alert("Your reservation was successfully made. We look forward to seeing you!!"); 
+        alert(
+          "Your reservation was successfully made. We look forward to seeing you!!"
+        );
       } else {
         const data = await response.json();
-        alert(data.error || 'Failed to make reservation. Please try again.');
+        alert(data.error || "Failed to make reservation. Please try again.");
       }
     } catch (error) {
       console.log(error);

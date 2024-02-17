@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import ReservationForm from './ReservationForm';
-import ReviewForm from './ReviewForm';
-import ReviewList from './ReviewList.jsx';
-import '../styles/ReviewForm.css';
+import { useState, useEffect } from "react";
+import ReservationForm from "./ReservationForm";
+import ReviewForm from "./ReviewForm";
+import ReviewList from "./ReviewList.jsx";
+import "../styles/ReviewForm.css";
 
 function MealDetails({ match }) {
   const [meal, setMeal] = useState(null);
@@ -11,14 +11,14 @@ function MealDetails({ match }) {
   useEffect(() => {
     const mealId = match.params.id;
     fetch(`/api/meals/${mealId}`)
-      .then(response => response.json())
-      .then(data => setMeal(data))
-      .catch(error => console.error('Error:', error));
+      .then((response) => response.json())
+      .then((data) => setMeal(data))
+      .catch((error) => console.error("Error:", error));
 
     fetch(`/api/reviews/${mealId}`)
-      .then(response => response.json())
-      .then(data => setReviews(data))
-      .catch(error => console.error('Error fetching reviews:', error));
+      .then((response) => response.json())
+      .then((data) => setReviews(data))
+      .catch((error) => console.error("Error fetching reviews:", error));
   }, [match.params.id]);
 
   if (!meal) {
