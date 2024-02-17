@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Meal from './Meals';
-import '../../styles/MealsList.css'; 
+import Meal from './Meal';
+import '../styles/MealsList.css'; 
 
 const MealsList = () => {
   const [meals, setMeals] = useState([]);
@@ -13,8 +13,11 @@ const MealsList = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Meals List</h2>
+    <div className="containerList">
+      <div className="titleContainer">
+        <h2>Meals List</h2>
+        <h4>Enjoy your favorite dishes</h4>
+      </div>
       <div className="meals-grid">
         {meals.map(meal => (
           <Meal key={meal.id} meal={meal} />

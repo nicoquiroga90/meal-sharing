@@ -6,8 +6,6 @@
 }
 
 #root {
-  padding-left: 30%;
-  padding-right: 30%;
   height: 100vh;
 }
 
@@ -37,12 +35,6 @@ button {
   font-size: 17px;
 }
 
-@media screen and (max-width: 1400px) {
-  #root {
-    padding-left: 30%;
-    padding-right: 30%;
-  }
-}
 
 @media screen and (max-width: 750px) {
   #root {
