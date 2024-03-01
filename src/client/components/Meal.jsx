@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
-import '../styles/MealsList.css';
+import { Link } from "react-router-dom";
+import "../styles/MealsList.css";
 
 const Meal = ({ meal }) => {
   const formattedPrice =
-    typeof meal.price === 'string' ? parseFloat(meal.price) : meal.price;
+    typeof meal.price === "string" ? parseFloat(meal.price) : meal.price;
 
   return (
     <Link to={`/meals/${meal.id}`} className="meal-link">
