@@ -6,7 +6,7 @@ router.post("/", async (req, res) => {
     const newReservation = req.body;
      newReservation.created_date = new Date();
     try {
-      await knex("homework3.Reservation").insert(newReservation);
+      await knex("reservations").insert(newReservation);
       res.status(201).json("Reservation created successfully")
     } catch (error) {
       console.log(error);
@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
 
     try {
       const { id } = req.params;
-      const reservations = await knex("homework3.Reservation").select("*").where({ id }).first();
+      const reservations = await knex("reservations").select("*").where({ id }).first();
       if (reservations) {
         res.json(reservations);
       } else {
