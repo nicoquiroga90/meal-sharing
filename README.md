@@ -1,6 +1,11 @@
 # Meal Sharing App
 
-➡️ [LINK TO THE APP](https://meal-sharing-n0q9.onrender.com)
+![](./src/client/assets/images/mealsharingpic1.png)
+
+![](./src/client/assets/images/mealsharingpic2.png)
+
+➡️ [Link to the App](https://meal-sharing-n0q9.onrender.com)
+
 # Description
 
 This is a full-stack web application built with Typescript, Express.js, React, and PostgreSQL.
@@ -32,3 +37,5 @@ Through these challenges, I was able to gain a better understanding of React, CS
 In addition to these technical skills, I also learned how to manage my time effectively and prioritize tasks to meet deadlines.
 
 Overall, this project was a great learning experience for me and helped me grow as a developer.
+
+
