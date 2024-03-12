@@ -32,8 +32,5 @@ The main functionalities of this website are:
 
 # Meal-Sharinig App Project Presentation
 
-[![Meal-Sharing APP]          // Title
-(Meal-SharinigAppProjectPresentation-ezgif.com-video-to-gif-converter.gif)] // Thumbnail
-(https://www.loom.com/share/e595a6a0a609471191ae8dda1db28831?sid=05e65aae-b4dd-4819-ad87-c9a471c55c25)    // Video Link
-
+[![Meal-Sharing APP](Meal-SharinigAppProjectPresentation-ezgif.com-video-to-gif-converter.gif)](https://www.loom.com/share/e595a6a0a609471191ae8dda1db28831?sid=05e65aae-b4dd-4819-ad87-c9a471c55c25)
 
