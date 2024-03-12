@@ -29,3 +29,8 @@ The main functionalities of this website are:
 - PostgreSQL
 - React
 - CSS Modules
+
+# Meal-Sharinig App Project Presentation
+
+[![Meal-Sharinig App Project Presentation]
+(https://www.loom.com/share/e595a6a0a609471191ae8dda1db28831?sid=05e65aae-b4dd-4819-ad87-c9a471c55c25) 
