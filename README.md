@@ -31,6 +31,9 @@ The main functionalities of this website are:
 - CSS Modules
 
 # Meal-Sharinig App Project Presentation
+
 <p align="center">
-[![Meal-Sharing APP](Meal-SharinigAppProjectPresentation-ezgif.com-video-to-gif-converter.gif)](https://www.loom.com/share/e595a6a0a609471191ae8dda1db28831?sid=05e65aae-b4dd-4819-ad87-c9a471c55c25)
-<p/>
+  <a href="https://www.loom.com/share/e595a6a0a609471191ae8dda1db28831?sid=05e65aae-b4dd-4819-ad87-c9a471c55c25">
+    <img src="Meal-SharinigAppProjectPresentation-ezgif.com-video-to-gif-converter.gif" alt="Meal-Sharing APP">
+  </a>
+</p>
