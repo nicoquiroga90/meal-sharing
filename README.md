@@ -1,6 +1,6 @@
 # Meal Sharing App
 
-![]()
+![Meal Sharing App](./src/client/assets/images/mealsharingpic1.png)
 
 # Make a Reservarion & leave a Review
 ![Make a Reservarion & Leave a Review](./src/client/assets/images/mealsharingpic2.png)
@@ -32,6 +32,4 @@ The main functionalities of this website are:
 
 # Meal-Sharinig App Project Presentation
 
-[![Meal-Sharinig App Project Presentation]
-(./src/client/assets/images/mealsharingpic1.png)]
-(https://www.loom.com/share/e595a6a0a609471191ae8dda1db28831?sid=05e65aae-b4dd-4819-ad87-c9a471c55c25) 
+https://www.loom.com/share/e595a6a0a609471191ae8dda1db28831?sid=05e65aae-b4dd-4819-ad87-c9a471c55c25
